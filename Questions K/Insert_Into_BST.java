@@ -1,4 +1,3 @@
-
 public class Insert_Into_BST {
     public static void main(String[] args) {
         int[] in ={10,20,30,40,50,60,70,80};
@@ -21,4 +20,5 @@ public class Insert_Into_BST {
         }
         return root;
     }
+
 }
