@@ -27,10 +27,11 @@ class Solution {
         sbp.max=Math.max(lbp.min , Math.min(rbp.min,root.val));
         sbp.isbst=lbp.isbst && rbp.isbst && lbp.max<root.val && rbp.min>root.val;
     }
-    class BstPair{
+      class BstPair{
         boolean isBst =true;
         Long max=Long.MIN_VALE
         Long min=Long.MAX_VALE
-    }
+      }
     }
 }
+
