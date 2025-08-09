@@ -1,5 +1,5 @@
 // linked list import (no actual import needed for custom list)
-
+//LL
 public class LinkedList {
     
     // Node class
@@ -103,3 +103,4 @@ public class LinkedList {
     System.out.println("No cycle detected");
     }
 }
+
