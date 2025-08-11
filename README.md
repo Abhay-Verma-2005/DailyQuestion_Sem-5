@@ -8,7 +8,7 @@ It is designed to help with **consistent practice** of Java programming, focusin
 - Problem Solving and Logical Thinking  
 - Real-life coding exercises  
 
-Each day introduces a **new Java question** with increasing difficulty levels.
+Each day introduces a **new Java question** with increasing difficulty levels .
 
 ---
 
