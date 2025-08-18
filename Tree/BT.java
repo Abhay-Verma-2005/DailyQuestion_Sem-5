@@ -11,6 +11,9 @@ public class BT {
     public BT(){
         root=createTree();
     }
+    public Node access(){
+        return root;
+    }
     private Node createTree(){
         int item=sc.nextInt();
         Node nn = new Node();
