@@ -8,6 +8,7 @@ public class BinaryTree_Client {
         System.out.println(bt.max());
         System.out.println(bt.min());
         System.out.println(bt.height());
+        
         bt.preorder();
         System.out.println();
         bt.postorder();
