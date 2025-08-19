@@ -8,12 +8,17 @@ public class BinaryTree_Client {
         System.out.println(bt.max());
         System.out.println(bt.min());
         System.out.println(bt.height());
+        
         bt.preorder();
         System.out.println();
         bt.postorder();
         System.out.println();
         bt.inorder();
+        System.out.println();
 
+        System.out.println("level order: ");
+    
+        bt.levelorder();
     }
 }
 // 10 true 8 true 4 false false true 2 false false true 1 false false

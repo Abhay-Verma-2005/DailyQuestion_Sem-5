@@ -11,8 +11,9 @@ public class Same_Sub_Tree {
     public static boolean SameTree(BT.Node n1, BT.Node n2){
         if(n1==null && n2==null) return true;
         else if(n1==null || n2==null) return false;
+        if(n1.val != n2.val) return false;
         
-        return (n1.val == n2.val) && (SameTree(n1.left , n2.left) && SameTree(n1.right , n2.right));
+        return (SameTree(n1.left , n2.left) && SameTree(n1.right , n2.right));
     }
 }
 

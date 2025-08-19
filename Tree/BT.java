@@ -6,6 +6,7 @@ public class BT {
         Node left;
         Node right;
     }
+    
     Scanner sc=new Scanner(System.in);
     private Node root;
     public BT(){
@@ -28,9 +29,11 @@ public class BT {
         }
         return nn;
     }
+    
     public void Display(){
         displayTree(root);
     }
+    
     private void displayTree(Node node){
         if(node == null){
             return ;
@@ -117,6 +120,27 @@ public class BT {
         inorder(node.left);
         System.out.print(node.val+" ");
         inorder(node.right);
+
+    }
+
+
+    public void levelorder(){
+        levelorder(root);
+    }
+    private void levelorder(Node node){
+        Queue<Node> q= new LinkedList<>();
+         q.add(node);
+        while(!q.isEmpty()){
+            Node rv=q.poll();
+            System.out.print(rv.val+" ");
+            if(rv.left!=null){
+                q.add(rv.left);
+            }
+            if(rv.right!=null){
+                q.add(rv.right);
+            }
+        }
+        System.out.println("");
 
     }
 }
