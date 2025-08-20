@@ -6,6 +6,7 @@ public class BT {
         Node left;
         Node right;
     }
+    
     Scanner sc=new Scanner(System.in);
     private Node root;
     public BT(){
@@ -28,9 +29,11 @@ public class BT {
         }
         return nn;
     }
+    
     public void Display(){
         displayTree(root);
     }
+    
     private void displayTree(Node node){
         if(node == null){
             return ;
