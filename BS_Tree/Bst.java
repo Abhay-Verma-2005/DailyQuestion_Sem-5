@@ -1,5 +1,5 @@
 package BS_Tree;
-import java.util.*;n
+import java.util.*;
 public class Bst {
     public class Node {
         int val;
@@ -8,7 +8,9 @@ public class Bst {
     }
 
     private Node root;
-
+    public Node access(){
+        return root;
+    }
     public Bst(int[] in) {
         root = CreateTree(in, 0, in.length - 1);
     }
@@ -104,5 +106,92 @@ public class Bst {
         }
         System.out.println("");
 
+    }
+    public int max(){
+        return max(root);
+    }
+    private int max(Node node){
+        if(node==null) return Integer.MIN_VALUE;
+
+        int right=max(node.right);
+        return Math.max(node.val, right);
+    }
+
+     public int min(){
+        return min(root);
+    }
+    private int min(Node node){
+        if(node==null) return Integer.MAX_VALUE;
+
+        int left=min(node.left);
+        return Math.min(node.val, left);
+    }
+    public boolean find(int item){
+        return find(root,item);
+    }
+    private boolean find(Node node,int item){
+        if(node==null) return false;
+        if(node.val==item) return true;
+        else if(item < node.val){
+        return find(node.left,item);
+        }
+        else{
+         return find(node.right,item);
+        }
+    }
+
+public void insert(int val) {
+    root = insertIntoBST(root, val);
+}
+
+private Node insertIntoBST(Node node, int val) {
+    if (node == null) {
+        Node nn = new Node();
+        nn.val = val;
+        return nn;
+    }
+    if (val < node.val) {
+        node.left = insertIntoBST(node.left, val);
+    } else {
+        node.right = insertIntoBST(node.right, val);
+    }
+    return node;
+}
+
+
+public void delete(int val) {
+    if(!find(val)){
+        System.out.print("Element not found");
+    }
+    else{
+        root = delet(root, val);
+    }
+}
+
+private Node delet(Node node, int item) {
+    if (node == null){
+        return null;
+    }
+    if(item>node.val){
+        node.right=delet(node.right,item);
+    }
+    else if(item<node.val){
+        node.left=delet(node.left,item);
+    }
+    else{
+        //0 or 1 child
+        if(node.left==null){
+            return node.right;
+        }
+        else if(node.right==null){
+                return node.left;
+            }
+        else {
+            int max=max(root.left);
+            root.left=delet(root,max);
+            root.val= max;
+        }
+        }
+    return node;
     }
 }
