@@ -30,6 +30,4 @@ public class Queknapsack {
     }
     
 }
-
-
-// (0-1 knapsack)
+//  (0-1 knapsack)

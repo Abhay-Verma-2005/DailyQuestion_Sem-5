@@ -1,8 +1,6 @@
 package DP;
 import java.util.*;
-
 public class MinPathSum {
-
     public int minPathSum(int[][] grid) {
         int[][] dp = new int[grid.length][grid[0].length];
         for (int[] a : dp) {
@@ -10,7 +8,6 @@ public class MinPathSum {
         }
         return path(grid, 0, 0, dp);
     }
-
     public static int path(int[][] grid, int cr, int cc, int[][] dp) {
         if (cr == grid.length - 1 && cc == grid[0].length - 1) {
             return grid[cr][cc];
@@ -25,7 +22,6 @@ public class MinPathSum {
         int right = path(grid, cr, cc + 1, dp);
         return dp[cr][cc] = Math.min(down, right) + grid[cr][cc];
     }
-
     public static void main(String[] args) {
         MinPathSum solver = new MinPathSum();
         int[][] grid = {
